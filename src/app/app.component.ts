@@ -15,16 +15,10 @@ export class AppComponent {
   onShowRecipe(showRecipeStatus) {
     this.displayRecipe = true;
     this.displayShoppingList = false;
-
-    console.log("Show Recipe? - " + this.displayRecipe);
-    console.log("Show Shopping List? - " + this.displayShoppingList);
   }
 
   onShowShoppingList(showRecipeStatus) {
     this.displayRecipe = false;
     this.displayShoppingList = true;
-
-    console.log("Show Recipe? - " + this.displayRecipe);
-    console.log("Show Shopping List? - " + this.displayShoppingList);
   }
 }
