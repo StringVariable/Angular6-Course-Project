@@ -1,5 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { Ingredient } from '../shared/ingredient.model';
 
 export class RecipeService {
 
@@ -7,14 +8,24 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe (
-      'Lights',
-      'Ellie Goulding\'s first album.',
-      'http://e-cdn-images.deezer.com/images/artist/7cb51cc348a5f81a5d641b2ee2887cde/200x200-000000-80-0-0.jpg'
+      'Chicken Parmie',
+      'Chicken Parmie with chips. Oh baby.',
+      'https://cdn.newsapi.com.au/image/v1/567d120e61ba43a35504c75c03f28ca0?width=1024',
+      [
+        new Ingredient('Chicken', 1),
+        new Ingredient('Cheese', 3),
+        new Ingredient('Chips', 20)
+      ]
     ),
     new Recipe (
-      'Halcyon',
-      'Ellie Goulding\'s second album.',
-      'http://e-cdn-images.deezer.com/images/artist/7cb51cc348a5f81a5d641b2ee2887cde/200x200-000000-80-0-0.jpg'
+      'Meat Pie',
+      'A servo meat pie with dead horse.',
+      'https://edge.alluremedia.com.au/m/l/2017/11/Meat-Pie.jpg',
+      [
+        new Ingredient('Beef', 1),
+        new Ingredient('Pastry', 2),
+        new Ingredient('Sauce', 1)
+      ]
     )
   ];
 
